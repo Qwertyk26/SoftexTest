@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+                name="viewModel"
+                type="ru.softex.feature.country.CountryViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                    android:id="@+id/country_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:imageUrl="@{viewModel.getImageUrl()}"
+                    android:adjustViewBounds="true" />
+
+            <TextView
+                    android:id="@+id/country_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    app:mutableText="@{viewModel.getCountryName()}"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:padding="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

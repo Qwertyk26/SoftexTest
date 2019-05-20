@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Sorftex</string>
+    <string name="app_name">Softex</string>
+    <string name="error_connection">Something went wrong, please try again</string>
+    <string name="retry">Try again</string>
 </resources>
